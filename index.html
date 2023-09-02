@@ -40,7 +40,8 @@
         <h4>1、本站旨在促进大模型应用，普及AIGC，降低各位来访者的使用门槛，能让各位更方便享受到全方位的大模型体验；</h4>
         <h4>2、禁止使用本站免费额度进行包括但不限于文献翻译、模型训练、参加大型竞赛等会造成巨额Token消耗的行为；</h4>
         <h4>3、禁止使用本站免费额度进行其他商业应用等一系列影响用户利益的行为；</h4>
-        <h4>4、如果来访者确有如上提及的需求，请前往 <a href="https://closure.rhodesisland.online/", target="_blank">莱茵开放平台</a> 购买 API 服务。免费额度属于公益性质，还请来访者理解。</h4>
+        <h4>4、如果来访者确有如上提及的需求，请前往 <a onclick="showAPI()">莱茵开放平台</a> 购买 API
+            服务。免费额度属于公益性质，还请来访者理解。</h4>
         <HR>
         <center>
             <h3>Rhine Assistant 用户人数已达上限，现暂停新用户注册和邀请注册，感谢各位来访者的信任和支持！</h3>
@@ -51,7 +52,9 @@
             <center>
                 <h4>注意：部分省市的来访者可能会出现无法直连或直连不稳定的情况，此时请优先使用教育网、光纤网络进行直连</h4>
             </center>
-            <center><h4>所有站点均重新更换了高速CDN，访问更加迅速！（注：带★的为直连状态较为稳定的站点，推荐使用）</h4></center>
+            <center>
+                <h4>所有站点均重新更换了高速CDN，访问更加迅速！（注：带★的为直连状态较为稳定的站点，推荐使用）</h4>
+            </center>
             <h4>以下为主站点: </h4>
             <li>河工大 主站：<a href="https://ai.haut.ink/" , target="_blank">点击前往</a></li>
             <li>罗德岛 主站：<a href="https://prts.rhodesisland.online/" , target="_blank">点击前往</a></li>
@@ -61,11 +64,10 @@
             <li>克莱茵：<a href="https://klein.rhinenlp.space/" , target="_blank">点击前往</a></li>
             <li>★ 须弥：<a href="https://nahida.mihoyo.click/" , target="_blank">点击前往</a></li>
             <li>往世乐土：<a href="https://nlp.elyspace.site/" , target="_blank">点击前往</a></li>
-            <li>超弦助手：<a href="https://assistant.stringspace.site/" , target="_blank">点击前往</a></li>
+            <li>★ 超弦助手：<a href="https://assistant.stringspace.site/" , target="_blank">点击前往</a></li>
         </ul>
         <center>
-            <h3>TIP: 来访者可以使用<a href="https://www.itdog.cn/http/" , target="_blank">ITDOG</a>对网站进行测速，查看速度和屏蔽情况 (仅供参考)。
-            </h3>
+            <h3>Tips：高亮字符可以点击</h3>
         </center>
         <center>
             <h3>如果你无法直连以上任一站点，<a onclick="showPopup()">请使用代理访问</a>。感谢来访者的支持！</h3>
@@ -107,6 +109,26 @@
             var content = document.createElement("div");
             content.className = "popup-content";
             content.innerHTML = "<div><h4>这不是商业推广，也不是广告，纯个人推荐！</h4><h4>会随价格波动不定期更新推荐</h4></div><HR><div>找了一个相对便宜的魔法，可供来访者不时之需: <a href=\"https://xn--9kq250ga.com/\" target=\"_blank\">点击前往</a></div><HR><div>使用邀请码: T99sJcil 可以获得一些福利</div>";
+
+            var closeBtn = document.createElement("span");
+            closeBtn.className = "popup-close";
+            closeBtn.innerHTML = "&times;";
+            closeBtn.onclick = function () {
+                popup.parentNode.removeChild(popup);
+            };
+
+            popup.appendChild(content);
+            popup.appendChild(closeBtn);
+            document.body.appendChild(popup);
+        }
+
+        function showAPI() {
+            var popup = document.createElement("div");
+            popup.className = "popup";
+
+            var content = document.createElement("div");
+            content.className = "popup-content";
+            content.innerHTML = "<div><h4>莱茵开放平台导航</h4></div><HR><div>主站: <a href=\"https://closure.rhodesisland.online/\" target=\"_blank\">点击前往</a></div><HR><div>大陆CDN: <a href=\"https://api.hautqian.top/\" target=\"_blank\">点击前往</a></div></div>";
 
             var closeBtn = document.createElement("span");
             closeBtn.className = "popup-close";
