@@ -1,137 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="Logo.png" type="image/png">
     <title>Rhine Navigator</title>
-    <style>
-        .container {
-            width: 60%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            line-height: 2.3
-        }
-
-        a {
-            color: #20a53a
-        }
-    </style>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <center>
-            <h1>欢迎来访者来到 Rhine Assistant 站点导航</h1>
-        </center>
-        <HR>
-        <center>
-            <h3>用户守则</h3>
-        </center>
-        <h4>1、本站旨在促进大模型应用，普及AIGC，降低各位来访者的使用门槛，能让各位更方便享受到全方位的大模型体验；</h4>
-        <h4>2、禁止使用本站免费额度进行包括但不限于文献翻译、模型训练、参加大型竞赛等会造成巨额Token消耗的行为；</h4>
-        <h4>3、禁止使用本站免费额度进行其他商业应用等一系列影响用户利益的行为；</h4>
-        <h4>4、如果来访者确有如上提及的需求，请前往 <a onclick="showAPI()">Rhine Open Platform</a> 购买 API
-            服务。免费额度属于公益性质，还请来访者理解。</h4>
-        <HR>
-        <ul>
-            <center>
-                <h4>注意：由于近日阻断严重，请优先使用强加密站点和稳定站点</h4>
-                <h4>强加密站点是指已经支持了 ECH 技术的站点，请开启浏览器的 ECH 功能并结合 DoH 使用</h4>
-            </center>
-            <h4>ECH站点：</h4>
-            <li>中心站点：<a href="https://model.elyhaut.top/" , target="_blank">点击前往</a></li>
-            <li>站点 1：<a href="https://ai.haut.ink/" , target="_blank">点击前往</a></li>
-            <li>站点 2：<a href="https://www.hautqian.top/" , target="_blank">点击前往</a></li>
-            <HR>
-            <h4>全球站点: </h4>
-            <li>站点 1：<a href="https://nahida.mihoyo.click/" , target="_blank">点击前往</a></li>
-            <li>站点 2：<a href="https://klein.rhinenlp.space/" , target="_blank">点击前往</a></li>
-            <li>站点 3：<a href="https://nlp.elyspace.site/" , target="_blank">点击前往</a></li>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fas fa-home"></i>导航</a></li>
+            <li><a href="pages/rule.html"><i class="fas fa-ruler"></i>守则</a></li>
+            <li><a href="pages/tool.html"><i class="fas fa-toolbox"></i>工具</a></li>
+            <li><a href="pages/about.html"><i class="fas fa-info"></i>关于</a></li>
+            <li><button onclick="toggleColorMode()"><i class="fas fa-adjust"></i>切换主题</button></li>
         </ul>
-        <center>
-            <h3>点击这里查看 <a href="https://hq8hgl6szr1.feishu.cn/docx/PMOCdSsAooSfQnxdttZcHRNmnsf?from=from_copylink", target="_blank">使用文档</a></h3>
-            <h3>如果你无法直连以上任一站点，<a onclick="showPopup()">请使用代理访问</a>。感谢来访者的支持！</h3>
-        </center>
+        <div class="content">
+            <center>
+                <h1>欢迎来到 Rhine Navigator 导航站</h1>
+            </center>
+            <ul class="rhine">
+                <center>
+                    <h4>注意：由于近日阻断严重，请优先使用 ECH 站点</h4>
+                    <h4>强加密站点是指已经支持了 ECH 技术的站点，请开启浏览器的 ECH 功能并结合 DoH 使用</h4>
+                </center>
+                <h3>ECH 站点：</h3>
+                <li>中心站点：<a href="https://model.elyhaut.top/" , target="_blank">点击前往</a></li>
+                <li>站点 1：<a href="https://ai.haut.ink/" , target="_blank">点击前往</a></li>
+                <li>站点 2：<a href="https://www.hautqian.top/" , target="_blank">点击前往</a></li>
+                <HR>
+                <h3>全球站点: </h3>
+                <li>站点 1：<a href="https://nahida.mihoyo.click/" , target="_blank">点击前往</a></li>
+                <li>站点 2：<a href="https://klein.rhinenlp.space/" , target="_blank">点击前往</a></li>
+                <li>站点 3：<a href="https://nlp.elyspace.site/" , target="_blank">点击前往</a></li>
+                <HR>
+                <h3>Rhine Open Platform：</h3>
+                <li>全球唯一主站：<a href="https://api.elyhaut.top/" target="_blank">点击前往</a></li>
+            </ul>
+            <center>
+                <h5>Powered By Rhine Laboratory</h5>
+            </center>
+        </div>
     </div>
 
-    <style>
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            z-index: 9999;
-        }
-
-        .popup-content {
-            margin-bottom: 10px;
-        }
-
-        .popup-close {
-            cursor: pointer;
-            color: #999;
-            font-size: 18px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
-
-    <script>
-        function showPopup() {
-            var popup = document.createElement("div");
-            popup.className = "popup";
-
-            var content = document.createElement("div");
-            content.className = "popup-content";
-            content.innerHTML = "<div><h4>这不是商业推广，也不是广告，纯个人推荐！</h4><h4>会随价格波动不定期更新推荐</h4></div><HR><div>找了一个相对便宜的魔法，可供来访者不时之需: <a href=\"https://xn--9kq250ga.com/\" target=\"_blank\">点击前往</a></div><HR><div>使用邀请码: T99sJcil 可以获得一些福利</div>";
-
-            var closeBtn = document.createElement("span");
-            closeBtn.className = "popup-close";
-            closeBtn.innerHTML = "&times;";
-            closeBtn.onclick = function () {
-                popup.parentNode.removeChild(popup);
-            };
-
-            popup.appendChild(content);
-            popup.appendChild(closeBtn);
-            document.body.appendChild(popup);
-        }
-
-        function showAPI() {
-            var popup = document.createElement("div");
-            popup.className = "popup";
-
-            var content = document.createElement("div");
-            content.className = "popup-content";
-            content.innerHTML = "<div><h4>欢迎访问莱茵开放平台</h4></div><HR><center><div><a href=\"https://api.elyhaut.top/\" target=\"_blank\">点击前往站点</a></div></center></div>";
-
-            var closeBtn = document.createElement("span");
-            closeBtn.className = "popup-close";
-            closeBtn.innerHTML = "&times;";
-            closeBtn.onclick = function () {
-                popup.parentNode.removeChild(popup);
-            };
-
-            popup.appendChild(content);
-            popup.appendChild(closeBtn);
-            document.body.appendChild(popup);
-        }
-    </script>
+    <script src="static/script.js"></script>
 </body>
 
 </html>
