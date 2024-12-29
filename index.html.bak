@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="Logo.png" type="image/png">
-    <title>Rhine Navigator</title>
+    <title>518stringNav</title>
     <style>
         .container {
             width: 60%;
@@ -31,7 +31,7 @@
 <body>
     <div class="container">
         <center>
-            <h1>欢迎来访者来到 Rhine Assistant 站点导航</h1>
+            <h1>欢迎来访者来到 518stringNav 站点导航</h1>
         </center>
         <HR>
         <center>
